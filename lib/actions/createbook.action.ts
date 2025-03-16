@@ -79,6 +79,63 @@ export const getBookById = async (id: number) => {
     }
   };
 
+// serach actions
+
+
+
+export async function searchBooks(query: string) {
+  if (!query) return [];
+
+  try {
+    const books = await prisma.addBook.findMany({
+      where: {
+        OR: [
+          { title: { contains: query, mode: "insensitive" } },
+          { author: { contains: query, mode: "insensitive" } },
+          { genra: { contains: query, mode: "insensitive" } },
+        ],
+      },
+      orderBy: { createdAt: "desc" },
+      select: {
+        id: true,
+        title: true,
+        author: true,
+        genra: true,
+        bookImage: true,
+        bookColor: true,
+        bookSummary: true,
+      },
+    });
+
+    return books;
+  } catch (error) {
+    console.error("Error fetching books:", error);
+    return [];
+  }
+}
+
+
+// export async function searchBooks(query: string) {
+//   if (!query) return [];
+
+//   try {
+//     const books = await prisma.addBook.findMany({
+//       where: {
+//         OR: [
+//           { title: { contains: query, mode: "insensitive" } },
+//           { author: { contains: query, mode: "insensitive" } },
+//           { genra: { contains: query, mode: "insensitive" } },
+//         ],
+//       },
+//       orderBy: { createdAt: "desc" },
+//     });
+
+//     return books;
+//   } catch (error) {
+//     console.error("Error fetching books:", error);
+//     return [];
+//   }
+// }
 
 //  export const deleteBook = async (id: number) => {
 //     try {

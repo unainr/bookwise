@@ -58,3 +58,13 @@ export const addBooksSchema = z.object({
 
 	booksummary: z.string().trim().min(10),
 });
+
+export interface SearchBookResult {
+	id: number;
+	title: string;
+	author: string;
+	genra: string;
+	bookImage: string;
+	bookColor: string;
+	bookSummary: string;
+  }

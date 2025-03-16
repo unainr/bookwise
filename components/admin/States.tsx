@@ -1,12 +1,12 @@
-import { BookMarked, BookOpen } from 'lucide-react'
 import React from 'react'
+import { BookMarked, BookOpen } from 'lucide-react'
 
 const States = () => {
 
     return (
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {/* Borrow Books Card */}
-      <div className='bg-white shadow-md rounded-xl p-6 border border-gray-50 hover:shadow-lg transition-shadow duration-300'>
+      <div className='bg-white shadow rounded-xl p-6 border border-gray-50  transition-shadow duration-300'>
         <div className='flex items-start justify-between'>
           <div className='flex flex-col gap-3'>
             <p className='text-sm font-medium text-gray-500 uppercase tracking-wide'>Borrow books</p>
@@ -28,7 +28,7 @@ const States = () => {
       </div>
     
       {/* Total Users Card */}
-      <div className='bg-white shadow-md rounded-xl p-6 border border-gray-50 hover:shadow-lg transition-shadow duration-300'>
+      <div className='bg-white shadow rounded-xl p-6 border border-gray-50  transition-shadow duration-300'>
         <div className='flex items-start justify-between'>
           <div className='flex flex-col gap-3'>
             <p className='text-sm font-medium text-gray-500 uppercase tracking-wide'>Total Users</p>
@@ -52,7 +52,7 @@ const States = () => {
       </div>
     
       {/* Total Books Card */}
-      <div className='bg-white shadow-md rounded-xl p-6 border border-gray-50 hover:shadow-lg transition-shadow duration-300'>
+      <div className='bg-white shadow rounded-xl p-6 border border-gray-50  transition-shadow duration-300'>
         <div className='flex items-start justify-between'>
           <div className='flex flex-col gap-3'>
             <p className='text-sm font-medium text-gray-500 uppercase tracking-wide'>Total books</p>

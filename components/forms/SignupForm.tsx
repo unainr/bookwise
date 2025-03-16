@@ -155,7 +155,7 @@ const SignupForm = () => {
               )}
 				</Button>
 				<div className="text-center">
-					<Link href={"sign-up"}>
+					<Link href={"sign-in"}>
 						Already have an account?{" "}
 						<span className="text-[#E7C9A5] font-extrabold">Sign in</span>
 					</Link>

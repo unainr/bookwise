@@ -4,7 +4,11 @@ import BookCoverAdmin from './BookCoverAdmin';
 import {  PencilIcon, TrashIcon } from 'lucide-react';
 
 const AllBooks = async () => {
-  const response = await getAllBooks();
+
+const response = await getAllBooks();
+if(!response) return null;
+
+ 
   
   return (
     <div className="w-full">
@@ -20,7 +24,7 @@ const AllBooks = async () => {
             </tr>
           </thead>
           <tbody>
-  {response.success && response.books && response.books.map((book) => (
+  {response.success && response.books && response.books.map((book:any) => (
     <tr key={book.id} className="border-b hover:bg-gray-50">
       <td className="py-4 px-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">

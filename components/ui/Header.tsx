@@ -28,7 +28,7 @@ const Header = ({ session }: { session: any }) => {
 		<header className={`bg-transparent  w-full transition-all duration-200 `}>
 			<div className="container flex h-16 items-center justify-between px-4 md:px-6">
 				<Link href="/">
-					<Image src="/icons/logo.svg" alt="logo" width={40} height={40} />
+					<Image src="/icons/frame.svg" alt="logo" width={140} height={40} />
 				</Link>
 				<nav className="hidden gap-6 md:flex justify-center  items-center">
 					<Link
@@ -82,17 +82,14 @@ const Header = ({ session }: { session: any }) => {
 					</SheetTrigger>
 					<SheetContent>
 						<nav className="flex flex-col gap-4  items-center justify-center">
-							<Link href="/generate" className="text-sm font-medium">
-								Generate
+							<Link href="/" className="text-sm font-medium">
+								Home
 							</Link>
-							<Link href="/about" className="text-sm font-medium">
-								About
+							<Link href="/library" className="text-sm font-medium">
+								Library
 							</Link>
-							<Link href="#testimonials" className="text-sm font-medium">
-								Testimonials
-							</Link>
-							<Link href="#faq" className="text-sm font-medium">
-								FAQ
+							<Link href="sign-in" className="text-sm font-medium">
+								Sign In
 							</Link>
 						</nav>
 					</SheetContent>

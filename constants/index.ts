@@ -30,7 +30,7 @@ export const adminSideBarLinks = [
   {
     img: "/icons/admin/users.svg",
     route: "/admin/users",
-    text: "All Users",
+    text: "All Books",
   },
   {
     img: "/icons/admin/bookmark.svg",
